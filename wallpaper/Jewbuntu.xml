@@ -2,6 +2,15 @@
 <!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
 <wallpapers>
   <wallpaper deleted="false">
+    <name>Star of David</name>
+    <filename>@BACKGROUNDDIR@/Jewbuntu/Jewbuntu-star-blue.png</filename>
+    <filename-dark>@BACKGROUNDDIR@/Jewbuntu/Jewbuntu-star-purple.png</filename-dark>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#5b7fd6</pcolor>
+    <scolor>#4b1f7a</scolor>
+  </wallpaper>
+  <wallpaper deleted="false">
     <name>Star of David: Blue</name>
     <filename>@BACKGROUNDDIR@/Jewbuntu/Jewbuntu-star-blue.png</filename>
     <options>zoom</options>

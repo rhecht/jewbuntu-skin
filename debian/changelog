@@ -1,3 +1,10 @@
+jewbuntu-skin (0.1.0~git20261111.4+26.04) resolute; urgency=medium
+
+  * Background picker: paired "Star of David" entry (blue in light mode,
+    purple in dark mode), listed first.
+
+ -- Jewbuntu Developers <maintainers@jewbuntu.invalid>  Wed, 11 Nov 2026 15:12:00 -0500
+
 jewbuntu-skin (0.1.0~git20261111.3+26.04) resolute; urgency=medium
 
   * Login background from the new default wallpaper (Star of David on blue
