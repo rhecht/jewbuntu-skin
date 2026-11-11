@@ -1,0 +1,22 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: jewbuntu-skin
+Source: https://github.com/rhecht/jewbuntu-skin
+
+Files: *
+Copyright: 2021-2026 WhiteSur Developers, vinceliuice; 2026 Jewbuntu Developers
+License: MIT
+
+Files: wallpaper/Jewbuntu-day.jpeg wallpaper/Jewbuntu-night.jpeg wallpaper/source/*
+Copyright: 2026 Jewbuntu Developers
+License: CC-BY-SA-4.0
+
+Files: wallpaper/Jewbuntu-star-*.png
+Copyright: 2026 Jewbuntu project
+License: other
+ Supplied by the Jewbuntu project owner; licence to be confirmed before public release.
+
+License: MIT
+ See /usr/share/doc/jewbuntu-skin/COPYING (MIT licence text, upstream).
+
+License: CC-BY-SA-4.0
+ https://creativecommons.org/licenses/by-sa/4.0/legalcode

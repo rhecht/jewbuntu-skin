@@ -1,0 +1,30 @@
+#!/usr/bin/make -f
+include /usr/share/dpkg/pkg-info.mk
+export TERM = xterm
+export SKIN_SHELL_VERSION = 50
+DEST = $(CURDIR)/debian/jewbuntu-skin
+# Themes are built into debian/stage-themes (dh_prep empties DEST before install).
+# The upstream installer refuses to write inside its source tree, so it writes to a
+# fresh temp dir first; the result is then copied into debian/stage-themes.
+STAGE = $(CURDIR)/debian/stage-themes
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	mkdir -p $(STAGE)
+	tmp=$$(mktemp -d --tmpdir jewbuntu-skin-stage.XXXXXX) && \
+	  home=$$(mktemp -d --tmpdir jewbuntu-skin-home.XXXXXX) && \
+	  HOME=$$home bash ./install.sh -d $$tmp -b --shell -i jewbuntu && \
+	  test -d $$tmp/Jewbuntu-Light && \
+	  cp -a $$tmp/. $(STAGE)/
+
+override_dh_auto_install:
+	install -d $(DEST)/usr/share/themes $(DEST)/usr/share/backgrounds/Jewbuntu $(DEST)/usr/share/gnome-background-properties
+	cp -a $(STAGE)/. $(DEST)/usr/share/themes/
+	install -m 644 wallpaper/Jewbuntu-day.jpeg wallpaper/Jewbuntu-night.jpeg wallpaper/Jewbuntu-star-blue.png wallpaper/Jewbuntu-star-purple.png $(DEST)/usr/share/backgrounds/Jewbuntu/
+	sed 's#@BACKGROUNDDIR@#/usr/share/backgrounds#g' wallpaper/Jewbuntu.xml > $(DEST)/usr/share/gnome-background-properties/Jewbuntu.xml
+
+override_dh_builddeb:
+	find $(DEST) -exec touch -h -d @$(SOURCE_DATE_EPOCH) {} +
+	dh_builddeb

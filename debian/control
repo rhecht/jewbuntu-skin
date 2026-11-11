@@ -1,0 +1,20 @@
+Source: jewbuntu-skin
+Section: x11
+Priority: optional
+Maintainer: Jewbuntu Developers <maintainers@jewbuntu.invalid>
+Build-Depends: debhelper-compat (= 13), sassc, libglib2.0-dev-bin, libglib2.0-bin, libxml2-utils
+Standards-Version: 4.7.0
+Rules-Requires-Root: no
+Homepage: https://github.com/rhecht/jewbuntu-skin
+
+Package: jewbuntu-skin
+Architecture: all
+Depends: ${misc:Depends}
+Recommends: gnome-shell-extension-user-theme
+Description: Jewbuntu Skin - Mac-inspired GTK and GNOME Shell theme
+ Glass-style GTK 2/3/4 and GNOME Shell theme for Jewbuntu (light and dark,
+ normal and solid, HiDPI variants), based on the MacTahoe theme (MIT), plus
+ the Jewbuntu wallpapers in Settings > Appearance.
+ .
+ Installing the package changes nothing by itself; 'jewbuntu skin apply'
+ (from jewbuntu-core) switches an account to it and can undo the change.

@@ -1,0 +1,6 @@
+jewbuntu-skin (0.1.0~git20261111+26.04) resolute; urgency=medium
+
+  * First Jewbuntu Skin package, from MacTahoe upstream commit 1e45e19
+    with Jewbuntu branding, wallpapers and build fixes.
+
+ -- Jewbuntu Developers <maintainers@jewbuntu.invalid>  Wed, 11 Nov 2026 14:00:00 -0500
