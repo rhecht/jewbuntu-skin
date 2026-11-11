@@ -24,6 +24,9 @@ override_dh_auto_install:
 	cp -a $(STAGE)/. $(DEST)/usr/share/themes/
 	install -m 644 wallpaper/Jewbuntu-day.jpeg wallpaper/Jewbuntu-night.jpeg wallpaper/Jewbuntu-star-blue.png wallpaper/Jewbuntu-star-purple.png $(DEST)/usr/share/backgrounds/Jewbuntu/
 	sed 's#@BACKGROUNDDIR@#/usr/share/backgrounds#g' wallpaper/Jewbuntu.xml > $(DEST)/usr/share/gnome-background-properties/Jewbuntu.xml
+	# Login screen bundle, registered via update-alternatives in postinst (never overwrites Yaru).
+	install -d $(DEST)/usr/share/gnome-shell/theme/Jewbuntu
+	bash tools/build-gdm-gresource.sh $(STAGE)/Jewbuntu-Dark/gnome-shell $(DEST)/usr/share/gnome-shell/theme/Jewbuntu/gnome-shell-theme.gresource
 
 override_dh_builddeb:
 	find $(DEST) -exec touch -h -d @$(SOURCE_DATE_EPOCH) {} +

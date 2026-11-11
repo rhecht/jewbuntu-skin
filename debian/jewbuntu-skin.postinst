@@ -1,0 +1,9 @@
+#!/bin/sh
+# Offer the Jewbuntu login-screen theme through Ubuntu's gdm-theme.gresource alternative.
+# Priority 20 beats Yaru (15) in automatic mode; a manual admin choice is respected.
+set -e
+if [ "$1" = "configure" ]; then
+    update-alternatives --install /usr/share/gnome-shell/gdm-theme.gresource gdm-theme.gresource \
+        /usr/share/gnome-shell/theme/Jewbuntu/gnome-shell-theme.gresource 20
+fi
+#DEBHELPER#

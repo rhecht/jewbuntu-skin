@@ -1,5 +1,7 @@
-jewbuntu-skin (0.1.0~git20261111+26.04) resolute; urgency=medium
+jewbuntu-skin (0.1.0~git20261111.1+26.04) resolute; urgency=medium
 
+  * Login screen (GDM) themed: own bundle registered as the gdm-theme.gresource
+    alternative (priority 20), Yaru left untouched.
   * First Jewbuntu Skin package, from MacTahoe upstream commit 1e45e19
     with Jewbuntu branding, wallpapers and build fixes.
 
