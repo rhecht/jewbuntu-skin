@@ -37,7 +37,7 @@ usage() {
   helpify "-HD, --highdefinition"         ""                                                  "  Set to High Definition size"                     "Default is laptop size"
 
   helpify "--shell, --gnomeshell"         ""                                                  "  Tweaks for gnome-shell"                          "Options:"
-  helpify "   1. -i, -icon"               "[$(IFS='|'; echo "${ICON_VARIANTS[*]}")]"          "    Set gnome-shell panel 'Activities' icon"       "Default is 'standard'"
+  helpify "   1. -i, -icon"               "[$(IFS='|'; echo "${ICON_VARIANTS[*]}")]"          "    Set gnome-shell panel 'Activities' icon"       "Default is 'jewbuntu'"
   helpify "   2. -p, -panelopacity"       "[$(IFS='|'; echo "${PANEL_OPACITY_VARIANTS[*]}")]" "    Set gnome-shell panel transparency"            "Default is 15%"
   helpify "   3. -h, -panelheight"        "[$(IFS='|'; echo "${PANEL_SIZE_VARIANTS[*]}")]"    "    Set gnome-shell panel height size"             "Default is 32px"
   helpify "   4. -sf, -smallerfont"       ""                                                  "    Set gnome-shell font size to smaller (10pt)"   "Default is 11pt"

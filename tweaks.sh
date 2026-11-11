@@ -34,8 +34,8 @@ usage() {
 
   helpify "" "" "Tweaks for GDM theme" "options"
   sec_title "-g, --gdm"                    ""                                                  "  Without options default GDM theme will install..."                ""
-  sec_helpify "1. -i, -icon"               "[$(IFS='|'; echo "${ICON_VARIANTS[*]}")]"          "  Set GDM panel 'Activities' icon"                                  "Default is 'standard'"
-  sec_helpify "2. -b, -background"         "[default|blank|IMAGE_PATH]"                        "  Set GDM background image"                                         "Default is MacOS wallpaper"
+  sec_helpify "1. -i, -icon"               "[$(IFS='|'; echo "${ICON_VARIANTS[*]}")]"          "  Set GDM panel 'Activities' icon"                                  "Default is 'jewbuntu'"
+  sec_helpify "2. -b, -background"         "[default|blank|IMAGE_PATH]"                        "  Set GDM background image"                                         "Default is the Jewbuntu wallpaper"
   sec_helpify "3. -p, -panelopacity"       "[$(IFS='|'; echo "${PANEL_OPACITY_VARIANTS[*]}")]" "  Set GDM panel transparency"                                       "Default is 15%"
   sec_helpify "4. -h, -panelheight"        "[$(IFS='|'; echo "${PANEL_SIZE_VARIANTS[*]}")]"    "  Set GDM panel height size"                                        "Default is 32px"
   sec_helpify "5. -sf, -smallerfont"       ""                                                  "  Set GDM font size to smaller (10pt)"                              "Default is 11pt"

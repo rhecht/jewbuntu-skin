@@ -25,7 +25,8 @@ MY_USERNAME="${SUDO_USER:-$(logname 2> /dev/null || echo "${USER}")}"
 MY_HOME=$(getent passwd "${MY_USERNAME}" | cut -d: -f6)
 
 if command -v gnome-shell &> /dev/null; then
-  SHELL_VERSION="$(gnome-shell --version | cut -d ' ' -f 3 | cut -d . -f -1)"
+  # SKIN_SHELL_VERSION lets package builds target a GNOME version other than the build host's.
+  SHELL_VERSION="${SKIN_SHELL_VERSION:-$(gnome-shell --version | cut -d ' ' -f 3 | cut -d . -f -1)}"
   if [[ "${SHELL_VERSION:-}" -ge "48" ]]; then
     GNOME_VERSION="48-0"
   elif [[ "${SHELL_VERSION:-}" -ge "47" ]]; then
@@ -43,7 +44,7 @@ if command -v gnome-shell &> /dev/null; then
   fi
 else
   GNOME_VERSION="48-0"
-  SHELL_VERSION="48"
+  SHELL_VERSION="${SKIN_SHELL_VERSION:-48}"
 fi
 
 #----------Program options-------------#
@@ -55,17 +56,17 @@ else
   SED_OPT="-i"
 fi
 
-SUDO_BIN="$(command -v sudo)"
+SUDO_BIN="$(command -v sudo || true)"
 
 #-------------Theme---------------#
-THEME_NAME="MacTahoe"
+THEME_NAME="Jewbuntu"
 COMMAND_COLOR_VARIANTS=('light' 'dark')
 COLOR_VARIANTS=('Light' 'Dark')
 OPACITY_VARIANTS=('normal' 'solid')
 ALT_VARIANTS=('normal' 'alt')
 THEME_VARIANTS=('default' 'blue' 'purple' 'pink' 'red' 'orange' 'yellow' 'green' 'grey')
 SCHEME_VARIANTS=('standard' 'nord')
-ICON_VARIANTS=('apple' 'simple' 'gnome' 'ubuntu' 'tux' 'arch' 'manjaro' 'fedora' 'debian' 'void' 'opensuse' 'popos' 'mxlinux' 'zorin' 'budgie' 'gentoo' 'kali')
+ICON_VARIANTS=('jewbuntu' 'simple' 'gnome' 'ubuntu' 'tux' 'arch' 'manjaro' 'fedora' 'debian' 'void' 'opensuse' 'popos' 'mxlinux' 'zorin' 'budgie' 'gentoo' 'kali')
 PANEL_OPACITY_VARIANTS=('default' '30' '45' '60' '75')
 PANEL_SIZE_VARIANTS=('default' 'smaller' 'bigger')
 

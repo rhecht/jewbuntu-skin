@@ -12,7 +12,7 @@ else
   PROPERTIES_DIR="$HOME/.local/share/gnome-background-properties"
 fi
 
-THEME_NAME='MacTahoe'
+THEME_NAME='Jewbuntu'
 
 #COLORS
 CDEF=" \033[0m"                               # default color
@@ -51,7 +51,7 @@ install() {
 
   mkdir -p ${BACKGROUND_DIR}/${THEME_NAME}
 
-  cp -a --no-preserve=ownership ${REPO_DIR}/*.jpeg ${BACKGROUND_DIR}/${THEME_NAME}
+  cp -a --no-preserve=ownership ${REPO_DIR}/*.jpeg ${REPO_DIR}/*.png ${BACKGROUND_DIR}/${THEME_NAME}
   cp -a --no-preserve=ownership ${REPO_DIR}/${THEME_NAME}.xml ${PROPERTIES_DIR}
 
   sed -i "s/@BACKGROUNDDIR@/$(printf '%s\n' "${BACKGROUND_DIR}" | sed 's/[\/&]/\\&/g')/g" "${PROPERTIES_DIR}/${THEME_NAME}.xml"

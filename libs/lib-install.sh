@@ -356,7 +356,7 @@ install_beggy() {
       ;;
     default)
   install_beggy_deps
-  "${IM_CMD}" ${REPO_DIR}/wallpaper/MacTahoe${IMG_COLOR}.jpeg ${CONVERT_OPT} ${TARGET_DIR}/background.png
+  "${IM_CMD}" ${REPO_DIR}/wallpaper/Jewbuntu${IMG_COLOR}.jpeg ${CONVERT_OPT} ${TARGET_DIR}/background.png
       ;;
     *)
       if [[ "${no_blur}" == "false" || "${no_darken}" == "false" ]]; then
