@@ -1,3 +1,20 @@
+jewbuntu-skin (0.1.0~git20261111.3+26.04) resolute; urgency=medium
+
+  * Login background from the new default wallpaper (Star of David on blue
+    waves), blurred and dimmed like the lock screen; listed first in the
+    background picker.
+
+ -- Jewbuntu Developers <maintainers@jewbuntu.invalid>  Wed, 11 Nov 2026 15:10:00 -0500
+
+jewbuntu-skin (0.1.0~git20261111.2+26.04) resolute; urgency=medium
+
+  * Login screen: real background (Jewbuntu night wallpaper, blurred and
+    dimmed like the lock screen) instead of the theme's 1x1 placeholder;
+    ship gdm-dark/-light/-high-contrast variants; build-depend on imagemagick
+    and fail the build rather than silently using a placeholder.
+
+ -- Jewbuntu Developers <maintainers@jewbuntu.invalid>  Wed, 11 Nov 2026 15:00:00 -0500
+
 jewbuntu-skin (0.1.0~git20261111.1+26.04) resolute; urgency=medium
 
   * Login screen (GDM) themed: own bundle registered as the gdm-theme.gresource

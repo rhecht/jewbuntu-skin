@@ -2,7 +2,7 @@ Source: jewbuntu-skin
 Section: x11
 Priority: optional
 Maintainer: Jewbuntu Developers <maintainers@jewbuntu.invalid>
-Build-Depends: debhelper-compat (= 13), sassc, libglib2.0-dev-bin, libglib2.0-bin, libxml2-utils
+Build-Depends: debhelper-compat (= 13), sassc, libglib2.0-dev-bin, libglib2.0-bin, libxml2-utils, imagemagick
 Standards-Version: 4.7.0
 Rules-Requires-Root: no
 Homepage: https://github.com/rhecht/jewbuntu-skin
