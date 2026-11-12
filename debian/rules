@@ -15,7 +15,7 @@ override_dh_auto_build:
 	mkdir -p $(STAGE)
 	tmp=$$(mktemp -d --tmpdir jewbuntu-skin-stage.XXXXXX) && \
 	  home=$$(mktemp -d --tmpdir jewbuntu-skin-home.XXXXXX) && \
-	  HOME=$$home bash ./install.sh -d $$tmp -b --shell -i jewbuntu && \
+	  HOME=$$home bash ./install.sh -d $$tmp --shell -i jewbuntu && \
 	  test -d $$tmp/Jewbuntu-Light && \
 	  cp -a $$tmp/. $(STAGE)/
 

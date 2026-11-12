@@ -1,3 +1,13 @@
+jewbuntu-skin (0.1.0~git20261112.1+26.04) resolute; urgency=medium
+
+  * Build without MacTahoe's --blur option. That variant makes app windows 75%
+    opaque, expecting Blur my Shell to blur what is behind them; Jewbuntu keeps
+    application blur off (it boxed the dock), so windows were see-through with
+    no blur. Windows are now 96% opaque, as on macOS; the dock, top bar and
+    menus keep their glass (GNOME Shell styles are not affected by --blur).
+
+ -- Jewbuntu Developers <maintainers@jewbuntu.invalid>  Thu, 12 Nov 2026 00:15:47 -0500
+
 jewbuntu-skin (0.1.0~git20261111.4+26.04) resolute; urgency=medium
 
   * Background picker: paired "Star of David" entry (blue in light mode,
