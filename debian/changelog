@@ -1,3 +1,10 @@
+jewbuntu-skin (0.1.0~git20261112.3+26.04) resolute; urgency=medium
+
+  * GTK4: fix six window-button border rules that GTK rejected in libadwaita
+    mode (upstream color-mix() typo; now uses GTK's mix()).
+
+ -- Jewbuntu Developers <maintainers@jewbuntu.invalid>  Thu, 12 Nov 2026 21:57:34 -0500
+
 jewbuntu-skin (0.1.0~git20261112.2+26.04) resolute; urgency=medium
 
   * GTK4 theme built in libadwaita mode (MacTahoe's --libadwaita colour handling,
