@@ -1,3 +1,12 @@
+jewbuntu-skin (0.1.0~git20261113.2+26.04) resolute; urgency=medium
+
+  * Shell: the quick-settings panel (top-right system menu and its Power Off
+    submenu) draws its own dark glass at 75%. Upstream left it 1% opaque,
+    relying on Blur my Shell to darken what is behind it; with that blur off,
+    its white text was unreadable on light wallpapers.
+
+ -- Jewbuntu Developers <maintainers@jewbuntu.invalid>  Fri, 13 Nov 2026 01:37:32 -0500
+
 jewbuntu-skin (0.1.0~git20261113.1+26.04) resolute; urgency=medium
 
   * Shell: open app folders use the same glass and text colours as menus (light

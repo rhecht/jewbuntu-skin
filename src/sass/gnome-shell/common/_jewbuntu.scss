@@ -44,3 +44,11 @@ $jb_folder_fg: $fg_color;
   .page-indicator .page-indicator-icon { background-color: rgba($jb_folder_fg, 0.5); }
   .page-indicator:checked .page-indicator-icon { background-color: $jb_folder_fg; }
 }
+
+// Quick settings (the top-right system menu, including its Power Off submenu): upstream draws
+// an almost clear panel (1% black) and relies on Blur my Shell to darken what is behind it.
+// Jewbuntu keeps that blur off (its fixed-radius blur showed square corners), so the panel
+// draws its own dark glass. Its white text and controls stay readable over any wallpaper.
+.quick-settings {
+  background-color: rgba(#242424, 0.75);
+}
