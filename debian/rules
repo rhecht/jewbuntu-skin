@@ -2,6 +2,8 @@
 include /usr/share/dpkg/pkg-info.mk
 export TERM = xterm
 export SKIN_SHELL_VERSION = 50
+# GTK4 theme in libadwaita mode (see gtk_base in libs/lib-install.sh)
+export SKIN_LIBADWAITA_SYSTEM = 1
 DEST = $(CURDIR)/debian/jewbuntu-skin
 # Themes are built into debian/stage-themes (dh_prep empties DEST before install).
 # The upstream installer refuses to write inside its source tree, so it writes to a

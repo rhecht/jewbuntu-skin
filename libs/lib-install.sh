@@ -982,6 +982,14 @@ gtk_base() {
     sed $SED_OPT "/\$scheme/s/standard/nord/"                                   "${THEME_SRC_DIR}/sass/_gtk-base-temp.scss"
     accent_type="fixed"
   fi
+
+  # Jewbuntu: build the installed GTK4 theme in libadwaita mode on GNOME 47+. It then uses
+  # libadwaita's colour variables and draws borders from currentColor, so apps that colour
+  # their own windows (Terminal/Ptyxis palettes, for example) keep readable menus and title
+  # bars. GTK3 styles do not read this switch.
+  if [[ "${SKIN_LIBADWAITA_SYSTEM:-}" == '1' && "${GNOME_VERSION}" -ge '47-0' ]]; then
+    sed $SED_OPT "/\$gnome_version/s/old/new/"                                  "${THEME_SRC_DIR}/sass/_gtk-base-temp.scss"
+  fi
 }
 
 reset_gtk_base() {

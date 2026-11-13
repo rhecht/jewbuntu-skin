@@ -1,3 +1,14 @@
+jewbuntu-skin (0.1.0~git20261112.2+26.04) resolute; urgency=medium
+
+  * GTK4 theme built in libadwaita mode (MacTahoe's --libadwaita colour handling,
+    for the installed theme): it uses libadwaita's colour variables and draws
+    borders from currentColor. Apps that colour their own windows (Terminal,
+    Ptyxis) now get readable menus and title bars: before, menu items kept the
+    skin's dark text on Terminal's dark menus, and title-bar buttons and the
+    title-bar edge stayed white. GTK3 styles are unchanged.
+
+ -- Jewbuntu Developers <maintainers@jewbuntu.invalid>  Thu, 12 Nov 2026 21:21:16 -0500
+
 jewbuntu-skin (0.1.0~git20261112.1+26.04) resolute; urgency=medium
 
   * Build without MacTahoe's --blur option. That variant makes app windows 75%
