@@ -1,0 +1,46 @@
+// Jewbuntu: one colour scheme across the shell.
+//
+// Upstream draws open app folders in fixed dark glass with white text in both variants, while
+// menus use light glass in the light variant. Jewbuntu folders use the menus' glass and text
+// colours instead: light with dark text in light mode, dark with light text in dark mode. Labels
+// inside a folder follow the panel; labels on the overview grid stay white on the wallpaper.
+// Imported last so these rules win over the upstream app-grid partials.
+
+$jb_folder_fg: $fg_color;
+
+.app-folder-dialog {
+  background-color: $popover_bg_color;
+  color: $jb_folder_fg;
+  border: solid if($variant == 'light', rgba(black, 0), rgba(black, 0.75));
+  border-width: if($variant == 'light', 0, 1px);
+
+  .folder-name-container {
+    .folder-name-label { color: $jb_folder_fg; }
+
+    .edit-folder-button {
+      color: $jb_folder_fg;
+      background-color: rgba($jb_folder_fg, 0.08);
+
+      &:hover { background-color: rgba($jb_folder_fg, 0.12); }
+      &:checked, &:active { background-color: rgba($jb_folder_fg, 0.18); }
+    }
+  }
+
+  .overview-tile {
+    color: $jb_folder_fg;
+
+    &:hover, &:focus { color: $jb_folder_fg; background-color: rgba($jb_folder_fg, 0.08); }
+    &:active, &:highlighted, &:selected, &:checked { color: $jb_folder_fg; background-color: rgba($jb_folder_fg, 0.14); }
+    &:insensitive { color: rgba($jb_folder_fg, 0.45); background-color: transparent; }
+  }
+
+  .icon-button, .page-navigation-arrow {
+    color: rgba($jb_folder_fg, 0.8);
+
+    &:hover { color: $jb_folder_fg; background-color: rgba($jb_folder_fg, 0.08); }
+    &:active { color: $jb_folder_fg; background-color: rgba($jb_folder_fg, 0.14); }
+  }
+
+  .page-indicator .page-indicator-icon { background-color: rgba($jb_folder_fg, 0.5); }
+  .page-indicator:checked .page-indicator-icon { background-color: $jb_folder_fg; }
+}

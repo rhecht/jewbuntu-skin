@@ -1,3 +1,11 @@
+jewbuntu-skin (0.1.0~git20261113.1+26.04) resolute; urgency=medium
+
+  * Shell: open app folders use the same glass and text colours as menus (light
+    with dark labels in light mode, dark with light labels in dark mode) instead
+    of upstream's fixed dark panel. One colour scheme across the shell.
+
+ -- Jewbuntu Developers <maintainers@jewbuntu.invalid>  Fri, 13 Nov 2026 00:26:35 -0500
+
 jewbuntu-skin (0.1.0~git20261112.3+26.04) resolute; urgency=medium
 
   * GTK4: fix six window-button border rules that GTK rejected in libadwaita
